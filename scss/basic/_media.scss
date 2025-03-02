@@ -483,7 +483,22 @@
             max-width: 350px;
         }
     }
-
+    .academy {
+        &__container {
+            max-width: 970px;
+        }
+        &__feedback {
+            padding-bottom: 50px;
+        }
+    }
+    .beginers {
+        &__container {
+            max-width: 970px;
+        }
+        &__info {
+            max-width: 450px;
+        }
+    }
     .footer {
         padding: 65px 30px 50px 50px;
     }
@@ -702,6 +717,22 @@
         }
         &__list {
             padding: 0 10px;
+        }
+    }
+    .academy {
+        &__container {
+            max-width: 760px;
+        }
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+    }
+    .beginers {
+        &__container {
+            max-width: 760px;
+        }
+        &__info {
+            max-width: 350px;
         }
     }
     .footer {
@@ -1044,6 +1075,35 @@
             width: 100%;
             background-image: url('../../img/product-card/contact-menedger-mobile.jpeg');
             border-radius: 0;
+        }
+    }
+    .academy {
+        &__container {
+            padding: 0 15px;
+            max-width: 556px;
+        }
+        &__menuBack {
+            top: 115px;
+        }
+    }
+    .beginers {
+        &__container {
+            padding: 0 15px;
+            max-width: 556px;
+        }
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__img {
+            width: 100%;
+        }
+        &__info {
+            margin-bottom: 20px;
+        }
+    }
+    .course {
+        &__container {
+            padding: 0 15px;
         }
     }
     .footer {
@@ -1519,6 +1579,16 @@
         &__container {
             padding: 154px 54px 36px 54px;
         }
+    }
+    .academy__feedback {
+        padding-bottom: 40px;
+        margin-bottom: 0;
+        &-window {
+            background-image: url('../img/academy/contact-mobile.jpeg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }      
     }
 }
 @media(max-width: 430px) {
