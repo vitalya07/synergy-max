@@ -1,5 +1,13 @@
 .speakers {
     padding: 40px 0;
+    &__wrrapper {
+        overflow: hidden;
+        position: relative;
+    }
+    &__inner {
+        display: flex;
+        justify-content: center;
+    }
     &__container {
         max-width: 896px;
         margin: 0 auto;

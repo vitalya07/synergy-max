@@ -499,6 +499,19 @@
             max-width: 450px;
         }
     }
+    .coursePage {
+        &__container {
+            max-width: 990px;
+        }
+        &__info {
+            max-width: 450px;
+        }
+    }
+    .text {
+        &__container {
+            max-width: 996px;
+        }
+    }
     .footer {
         padding: 65px 30px 50px 50px;
     }
@@ -733,6 +746,44 @@
         }
         &__info {
             max-width: 350px;
+        }
+    }
+    .coursePage {
+        &__container {
+            max-width: 768px;
+        }
+        &__wrapper {
+            flex-wrap: wrap;
+            min-height: 665px;
+            gap: 20px;
+        }
+        &__img {
+            max-width: 100%;
+            width: 100%;
+            height: 350px;
+        }
+        &__info {
+            max-width: 100%;
+            padding-bottom: 20px;
+            &-items {
+                margin-left: 20px;
+            }
+            &-descr {
+                margin-left: 20px;
+            }
+            &-elements {
+                margin-left: 20px;
+            }
+        }
+    }
+    .speakers {
+        &__container {
+            max-width: 768px;
+        }
+    }
+    .text {
+        &__container {
+            max-width: 765px;
         }
     }
     .footer {
@@ -1104,6 +1155,27 @@
     .course {
         &__container {
             padding: 0 15px;
+        }
+    }
+    .coursePage {
+        &__container {
+            max-width: 556px;
+            padding: 0 15px;
+        }
+    }
+    .speakers {
+        &__container {
+            padding: 0 15px;
+            max-width: 556px;
+        }
+    }
+    .text {
+        &__container {
+            max-width: 565px;
+        }
+        &__title {
+            font-size: 28px;
+            line-height: 23px;
         }
     }
     .footer {
@@ -1589,6 +1661,28 @@
             background-size: cover;
             background-repeat: no-repeat;
         }      
+    }
+    .speakers {
+        &__slides {
+            display: flex;
+            transition: transform 0.3s ease; 
+            width: calc(100% + 50%);
+        }
+        &__inner {
+            transition: all .4s;
+        }
+        &__slide {
+            flex: 0 0 70%; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center; 
+        }       
+    }
+    .text {
+        &__container {
+            padding: 0 15px;
+        }
     }
 }
 @media(max-width: 430px) {
