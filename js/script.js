@@ -39,6 +39,23 @@ ordersItem.forEach((item, index)=> {
         openOrder(index);
     })
 })
+
+const listItem = document.querySelectorAll('.list__item');
+
+function hiddenlistItem() {
+    ordersItem.forEach(item => {
+        item.classList.remove('active')
+    })
+}
+hiddenlistItem();
+function openlistItem(i) {
+    listItem[i].classList.toggle('active');
+}
+listItem.forEach((item, index)=> {
+    item.addEventListener('click', ()=> {
+        openlistItem(index);
+    })
+})
 //sliders
 
 let elms = document.getElementsByClassName( 'splide' );
