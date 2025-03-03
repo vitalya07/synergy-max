@@ -58,6 +58,99 @@ listItem.forEach((item, index)=> {
 })
 //sliders
 
+//2
+document.addEventListener('DOMContentLoaded', () => {
+    const sliderWrapper = document.querySelector('.speakers__wrapper');
+    const sliderInner = document.querySelector('.speakers__slides');
+    const slides = document.querySelectorAll('.speakers__slide');
+
+    if (!sliderWrapper || !sliderInner || slides.length === 0) {
+        console.error('Не удалось найти необходимые элементы слайдера.');
+        return;
+    }
+
+    const totalSlides = slides.length;
+    let offset = 0;
+    let startX = 0;
+    let endX = 0;
+
+    const moveSlider = () => {
+        sliderInner.style.transform = `translateX(-${offset}px)`;
+    };
+
+    const checkWidth = () => {
+        if (window.innerWidth < 500) {
+            // Устанавливаем слайдер
+            sliderInner.style.display = 'flex'; // Слайдер
+            slides.forEach(slide => {
+                slide.style.minWidth = '80%'; // Каждый слайд занимает всю ширину
+            });
+
+            // Добавляем обработчики событий для мобильных устройств
+            sliderWrapper.addEventListener('touchstart', touchStartHandler);
+            sliderWrapper.addEventListener('touchmove', touchMoveHandler);
+            sliderWrapper.addEventListener('touchend', touchEndHandler);
+        } else {
+            // Убираем слайдер
+            sliderInner.style.display = 'flex'; // Обычные блоки
+            slides.forEach(slide => {
+                slide.style.minWidth = 'auto'; // Автоматическая ширина для обычных блоков
+            });
+
+            // Удаляем обработчики событий
+            sliderWrapper.removeEventListener('touchstart', touchStartHandler);
+            sliderWrapper.removeEventListener('touchmove', touchMoveHandler);
+            sliderWrapper.removeEventListener('touchend', touchEndHandler);
+
+            // Сбрасываем offset
+            offset = 0;
+            moveSlider();
+        }
+    };
+
+    const touchStartHandler = (e) => {
+        startX = e.touches[0].clientX;
+    };
+
+    const touchMoveHandler = (e) => {
+        endX = e.touches[0].clientX;
+    };
+
+    const touchEndHandler = () => {
+        if (startX > endX + 50) { // Свайп влево
+            if (offset < (sliderWrapper.offsetWidth * (totalSlides - 1))) {
+                offset += sliderWrapper.offsetWidth; // Переход к следующему слайду
+            }
+        } else if (startX < endX - 50) { // Свайп вправо
+            if (offset > 0) {
+                offset -= sliderWrapper.offsetWidth; // Переход к предыдущему слайду
+            }
+        }
+        moveSlider();
+    };
+
+    checkWidth();
+    window.addEventListener('resize', checkWidth);
+});
+//3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

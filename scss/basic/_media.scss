@@ -1162,6 +1162,17 @@
             max-width: 556px;
             padding: 0 15px;
         }
+        &__info {
+            &-value {
+                font-size: 14px;
+            }
+            &-btn {
+                width: 165px;
+                height: 38px;
+                padding: 7px 15px;
+                font-size: 18px;
+            }
+        }
     }
     .speakers {
         &__container {
@@ -1664,19 +1675,25 @@
     }
     .speakers {
         &__slides {
+            justify-content: start;
             display: flex;
             transition: transform 0.3s ease; 
-            width: calc(100% + 50%);
+            // width: calc(100% + 50%);
+            width: 100%;
+            gap: 0;
+            
         }
         &__inner {
             transition: all .4s;
         }
         &__slide {
-            flex: 0 0 70%; 
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center; 
+            width: 100%;
+            padding: 0 10px;
+            margin-left: 50px;
         }       
     }
     .text {
