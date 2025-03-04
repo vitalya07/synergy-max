@@ -58,7 +58,6 @@ listItem.forEach((item, index)=> {
 })
 //sliders
 
-//2
 document.addEventListener('DOMContentLoaded', () => {
     const sliderWrapper = document.querySelector('.speakers__wrapper');
     const sliderInner = document.querySelector('.speakers__slides');
@@ -80,29 +79,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const checkWidth = () => {
         if (window.innerWidth < 500) {
-            // Устанавливаем слайдер
-            sliderInner.style.display = 'flex'; // Слайдер
+            sliderInner.style.display = 'flex'; 
             slides.forEach(slide => {
-                slide.style.minWidth = '80%'; // Каждый слайд занимает всю ширину
+                slide.style.minWidth = '80%'; 
             });
 
-            // Добавляем обработчики событий для мобильных устройств
             sliderWrapper.addEventListener('touchstart', touchStartHandler);
             sliderWrapper.addEventListener('touchmove', touchMoveHandler);
             sliderWrapper.addEventListener('touchend', touchEndHandler);
         } else {
-            // Убираем слайдер
-            sliderInner.style.display = 'flex'; // Обычные блоки
+            sliderInner.style.display = 'flex'; 
             slides.forEach(slide => {
-                slide.style.minWidth = 'auto'; // Автоматическая ширина для обычных блоков
+                slide.style.minWidth = 'auto';
             });
 
-            // Удаляем обработчики событий
             sliderWrapper.removeEventListener('touchstart', touchStartHandler);
             sliderWrapper.removeEventListener('touchmove', touchMoveHandler);
             sliderWrapper.removeEventListener('touchend', touchEndHandler);
 
-            // Сбрасываем offset
             offset = 0;
             moveSlider();
         }
@@ -117,13 +111,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const touchEndHandler = () => {
-        if (startX > endX + 50) { // Свайп влево
+        if (startX > endX + 50) { 
             if (offset < (sliderWrapper.offsetWidth * (totalSlides - 1))) {
-                offset += sliderWrapper.offsetWidth; // Переход к следующему слайду
+                offset += sliderWrapper.offsetWidth;
             }
-        } else if (startX < endX - 50) { // Свайп вправо
+        } else if (startX < endX - 50) { 
             if (offset > 0) {
-                offset -= sliderWrapper.offsetWidth; // Переход к предыдущему слайду
+                offset -= sliderWrapper.offsetWidth; 
             }
         }
         moveSlider();
@@ -132,42 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
     checkWidth();
     window.addEventListener('resize', checkWidth);
 });
-//3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 let elms = document.getElementsByClassName( 'splide' );

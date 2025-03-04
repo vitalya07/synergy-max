@@ -1,5 +1,6 @@
 .basket {
     padding: 48px 0 65px 0;
+    background-color: #f1f2f4;
     &__container {
         max-width: 966px;
         margin: 0 auto;
@@ -20,8 +21,11 @@
         flex-wrap: wrap;
     }
     &__products {
-        max-width: 471px;
+        width: 471px;
         margin-bottom: 40px;
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 25px 15px;
         &-title {
             font-family: 'SF Pro Regular', 'sans-serif';
             font-weight: 400;

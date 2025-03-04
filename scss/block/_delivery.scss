@@ -9,13 +9,17 @@
         margin-left: 33px;
     }
     &__form {
-        max-width: 430px;
+        max-width: 470px;
         display: flex;
         align-items: center;
         justify-content: start;
         flex-wrap: wrap;
         gap: 15px;
         margin-bottom: 40px;
+        background-color: #fff;
+        border-radius: 15px;
+        gap: 15px;
+        padding: 24px 22px 20px 22px;
     }
     &__label {
         width: 205px;
@@ -46,8 +50,11 @@
         }
     }
     &__payMethod {
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 24px 24px 23px 27px;
         &-title {
-            margin-bottom: 40px;
+            margin-bottom: 16px;
             font-family: 'SF Pro Regular', 'sans-serif';
             font-weight: 400;
             font-size: 18px;
@@ -65,6 +72,13 @@
             font-size: 14px;
             line-height: 16.8px;
             color: $colorText;
+            border: 2px solid #EAEDF3;
+            width: 208px;
+            height: 67px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 }

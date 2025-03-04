@@ -1,8 +1,9 @@
 .private {
     padding: 48px 0 100px 0;
+    background-color: #f1f2f4;
     &__container {
         max-width: 966px;
-        margin: 0 auto;
+        margin: 0 auto;        
     }
     &__title {
         font-family: 'SF Pro Bold', 'sans-serif';
@@ -23,6 +24,8 @@
     &__information {
         padding: 25px 27px 33px 27px;
         width: 473px;
+        background-color: #ffffff;
+        border-radius: 15px;
         &-title {
             font-family: SF Pro;
             font-weight: 700;
@@ -71,13 +74,15 @@
             font-size: 14px;
             line-height: 16.71px;
             color: $colorText;
-            padding: 34px;
+            border-radius: 50px;
             cursor: pointer;
         }
     }
     &__orders {
         padding: 26px 18px 25px 18px;
         width: 473px;
+        background-color: #ffffff;
+        border-radius: 15px;
         &-title {
             font-family: 'SF Pro Bold', 'sans-serif';
             font-weight: 700;
